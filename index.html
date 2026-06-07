@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Takeaway</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Mini Takeaway</h1>
+
+    <div id="setup">
+        <label for="initial-tokens">Jumlah Token Awal:</label>
+        <input type="number" id="initial-tokens" value="20" min="5" max="50">
+        <button onclick="startGame()">Mulai Game</button>
+    </div>
+
+    <div id="scoreboard" style="display:none;">
+        <span id="human-score">Kamu: 0</span>
+        <span id="ai-score">AI: 0</span>
+    </div>
+
+    <p id="tokens-count"></p>
+    <p id="tokens-info"></p>
+    <p id="turn-info"></p>
+
+    <div class="buttons" style="display:none;">
+        <button onclick="playerMove(1)">Ambil 1</button>
+        <button onclick="playerMove(2)">Ambil 2</button>
+        <button onclick="playerMove(3)">Ambil 3</button>
+    </div>
+
+    <button id="restart-btn" onclick="restartGame()" style="display:none;">Restart Game</button>
+
+    <p id="result"></p>
+    <p id="node-counter"></p>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
